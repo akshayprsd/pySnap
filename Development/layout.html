@@ -13,6 +13,7 @@
     <link href="css/hover.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" media="screen">
     <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link href="css/prettify.css" rel="stylesheet" media="screen">
     <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
 
 
@@ -143,5 +144,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()
+        })
+      }(window.jQuery)
+    </script>
   </body>
 </html>
