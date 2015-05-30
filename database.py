@@ -7,6 +7,7 @@ class articlecontent(Base):
 	__tablename__='Article'
 	title=Column(String,nullable=False)
 	author=Column(String,nullable=False)
+	description=Column(date,nullable=False)
 	content=Column(String,nullable=False)
 	date=Column(date,nullable=False)
 	time=Column(time, nullable=False)
