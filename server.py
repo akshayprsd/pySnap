@@ -18,38 +18,44 @@ app=Flask(__name__)
 @app.route('/home/')
 @app.route('/page/1')
 def homepage():
+    articlecontentrec=session.query(articlecontent).all()
+    l1=articlecontentrec[0:len(articlecontentrec)-1:1]
     recentrec=session.query(recent).all()
     unmissablerec=session.query(unmissable).all()
     trendingrec=session.query(trending).all()
-    return render_template('homepagetemp.html',recent=recentrec,unmissable=unmissablerec,trending=trendingrec)
+    return render_template('homepagetemp.html',recent=recentrec,unmissable=unmissablerec,trending=trendingrec,list=l1)
 
-'''   
+
 @app.route('/contact')
 def contactpage():
-    videos=session.query(YTLink1).all()
-    rand4=sample(videos,4)
-    return render_template('contact.html',rand4=rand4)
+    recentrec=session.query(recent).all()
+    unmissablerec=session.query(unmissable).all()
+    trendingrec=session.query(trending).all()
+    return render_template('contactus.html',recent=recentrec,unmissable=unmissablerec,trending=trendingrec)
     
 
 #about page has 6 videos
 
 @app.route('/about')
 def aboutpage():
-    videos=session.query(YTLink1).all()
-    rand6=sample(videos,6)
-    return render_template('about.html',rand6=rand6)
+    recentrec=session.query(recent).all()
+    unmissablerec=session.query(unmissable).all()
+    trendingrec=session.query(trending).all()
+    return render_template('about.html',recent=recentrec,unmissable=unmissablerec,trending=trendingrec)
+
 
 #temp has one main video which is vid and 10 random videos
-@app.route('/video/<int:id_num>')
-def videopage(id_num):
-    videos=session.query(YTLink1).all()
-    vid=session.query(YTLink1).filter_by(id_num=id_num).first()
-    random10=sample(videos,10)
-    return render_template('temp.html',vid=vid,randvid=random10)
+@app.route('/article/<int:id_num>')
+def articlepage(id_num):
+    articlecontentrec=session.query(articlecontent).filter_by(id_num=id_num).first()
+    recentrec=session.query(recent).all()
+    unmissablerec=session.query(unmissable).all()
+    trendingrec=session.query(trending).all()
+    return render_template('posttemp.html',recent=recentrec,unmissable=unmissablerec,trending=trendingrec,articlecontent=articlecontentrec)
 #use vid to get the video and randvid to get the 10 videos
 
 
-
+'''   
 @app.route('/page/<int:page_no>')
 def diffpage(page_no):
     videos=session.query(YTLink1).all()

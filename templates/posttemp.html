@@ -2,10 +2,11 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="col-md-8 col-md-offset-1">
-          <h1 class="text-left">Lorem Ipsum</h1>
-          <h2 class="text-left">By Author</h2>
-          <h3 class="text-left">Date & Time </h3>
+<div class="row voffset1">
+<div class="col-md-12">
+          <h1 class="text-left">{{articlecontent.title}}Lorem Ipsum</h1>
+          <h2 class="text-left">{{articlecontent.author}}</h2>
+          <h3 class="text-left">{{articlecontent.date}} & {{articlecontent.time}}</h3>
           <div class="panel">
                  <div class="panel-body">
                   <p class="text-right">
@@ -18,15 +19,7 @@
                     <a href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Google" target="_blank" class="btn azm-social azm-size-32 azm-square azm-long-shadow azm-google-plus"><i class="fa fa-google-plus"></i></a>
                   </p>
                   <p class="text-justified">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec facilisis ante. Etiam ultricies neque eu leo mattis, vitae tristique purus hendrerit. Cras tristique viverra massa. Sed enim dui, pellentesque sit amet pharetra vel, hendrerit quis purus. Ut felis lacus, ultrices consequat massa consectetur, fermentum maximus nunc. Phasellus blandit lectus sit amet purus facilisis, vel scelerisque ipsum auctor. In vitae congue leo. Nunc nec auctor felis. Aliquam id ligula vitae erat sodales rhoncus. Cras semper, diam ac sollicitudin ornare, nunc massa tincidunt diam, condimentum finibus lorem tortor eu ligula.
-
-                    Praesent tempus iaculis ipsum, sed suscipit turpis vulputate at. Quisque quis fringilla nunc. Phasellus iaculis sem vel tincidunt venenatis. Etiam eu velit at ipsum fringilla mollis sed ut sapien. Mauris interdum nibh libero, eget bibendum odio lobortis eget. Fusce suscipit libero sed ultricies euismod. Maecenas non metus vitae odio faucibus viverra. Vivamus consequat, quam varius porttitor luctus, mauris ligula faucibus ligula, imperdiet lobortis quam sem eu ipsum. Nunc vel tortor aliquam, pharetra erat eget, eleifend purus.
-
-                    Phasellus non purus at lorem luctus elementum. Proin id euismod lectus, ut cursus purus. Ut consectetur volutpat neque eu condimentum. Nunc tincidunt cursus est. Praesent eu tincidunt sapien, malesuada luctus neque. Maecenas eget sapien velit. Nunc quis lorem arcu. Cras venenatis malesuada posuere.
-
-                    Ut porttitor libero elit, elementum sollicitudin nisi dapibus et. Donec sed diam vitae nunc semper convallis vitae luctus mi. Morbi id pulvinar est. In mollis aliquam nisl, et congue erat porttitor at. Quisque in laoreet elit. Curabitur rhoncus mi arcu, non condimentum eros gravida a. Sed pellentesque, lorem nec sodales semper, tortor tortor hendrerit lectus, ut consectetur ante lectus a nulla. Nulla facilisi. Curabitur faucibus metus a fermentum iaculis.
-
-                    Morbi sit amet consequat tellus. Ut at velit pretium, commodo enim quis, iaculis lectus. Suspendisse est turpis, tristique in facilisis eu, tempor eleifend urna. Pellentesque diam ligula, vehicula nec nibh eu, viverra cursus magna. Etiam posuere nulla eget auctor laoreet. Quisque luctus nisi sit amet eros dictum, in egestas sapien rutrum. Nunc ac erat vitae ante tincidunt consectetur. Praesent facilisis orci non scelerisque efficitu
+                    {{articlecontent.content}}
                   </p>
                   <pre class="prettyprint lang-py linenums">
 import os import sys
@@ -45,6 +38,8 @@ Base.metadata.create_all(engine)
 
                  </div>
             </div>
+          </div>
+        </div>
 
 
 {% endblock %}
