@@ -39,8 +39,8 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="{{home_link}}">Home</a></li>
-            <li><a href="{{about_link}}">About</a></li>
-            <li><a href="{{contact_link}}">Contact</a></li>
+            <li><a href="{{url_for('aboutpage')}}">About</a></li>
+            <li><a href="{{url_for('contact')}}">Contact</a></li>
           </ul>
           <ul class="text-right">
 
@@ -97,13 +97,13 @@
 
           <div class="row voffset1">
             <ul>
-                      <a href="#" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Beginner</a>
-                      <a href="#" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Intermediate</a>
-                      <a href="#" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Advanced</a>
-                      <a href="#" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Django</a>
-                      <a href="#" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Flask</a>
-                      <a href="#" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>CSS</a>
-                      <a href="#" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>OOP</a>
+                      <a href="{{button_link[1]}}" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Beginner</a>
+                      <a href="{{button_link[2]}}" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Intermediate</a>
+                      <a href="{{button_link[3]}}" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Advanced</a>
+                      <a href="{{button_link[4]}}" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Django</a>
+                      <a href="{{button_link[5]}}" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>Flask</a>
+                      <a href="{{button_link[6]}}" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>CSS</a>
+                      <a href="{{button_link[7]}}" title="Subscribe" target="_blank" class="btn azm-social azm-btn azm-border-bottom azm-check"><i class="fa fa-code"></i>OOP</a>
                     </ul>
           </div>
         </div>
@@ -121,28 +121,34 @@
                    <div class="col-md-4">
                      <h3>Recent Posts</h3>
                       <ul class="text-left">
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li> 
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                       <a href="{{recent_link[1]}}"><li>{{recent[1]}}</li></a>
+                       <a href="{{recent_link[2]}}"><li>{{recent[2]}}</li></a>
+                       <a href="{{recent_link[3]}}"><li>{{recent[3]}}</li></a> 
+                       <a href="{{recent_link[4]}}"><li>{{recent[4]}}</li></a>
+                       <a href="{{recent_link[5]}}"><li>{{recent[5]}}</li></a>
+                       <a href="{{recent_link[6]}}"><li>{{recent[6]}}</li></a>
                       </ul>
                    </div>
                    <div class="col-md-4">
                      <h3>Unmissable Content</h3>
                       <ul class="text-left">
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li> 
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                       <a href="{{unmissable_link[1]}}"><li>{{unmissable[1]}}</li></a>
+                       <a href="{{unmissable_link[2]}}"><li>{{unmissable[2]}}</li></a>
+                       <a href="{{unmissable_link[3]}}"><li>{{unmissable[3]}}</li></a> 
+                       <a href="{{unmissable_link[4]}}"><li>{{unmissable[4]}}</li></a>
+                       <a href="{{unmissable_link[5]}}"><li>{{unmissable[5]}}</li></a>
+                       <a href="{{unmissable_link[6]}}"><li>{{unmissable[6]}}</li></a>
                       </ul>
                    </div>
                    <div class="col-md-4">
                      <h3>Trending</h3>
                       <ul class="text-left">
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li> 
-                       <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                       <a href="{{trending_link[1]}}"><li>{{trending[1]}}</li></a>
+                       <a href="{{trending_link[2]}}"><li>{{trending[2]}}</li></a>
+                       <a href="{{trending_link[3]}}"><li>{{trending[3]}}</li></a> 
+                       <a href="{{trending_link[4]}}"><li>{{trending[4]}}</li></a>
+                       <a href="{{trending_link[5]}}"><li>{{trending[5]}}</li></a>
+                       <a href="{{trending_link[6]}}"><li>{{trending[6]}}</li></a>
                       </ul>
                    </div>
                   </div>
@@ -156,7 +162,7 @@
 
      <footer class="footer">
        <div class="container">
-         <p class="text-muted">©2015 by prankSNAP.</p>
+         <p class="text-muted">©2015 by pySNAP.</p>
        </div>
      </footer>
 
