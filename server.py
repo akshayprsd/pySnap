@@ -1,8 +1,6 @@
 from flask import Flask,render_template,request,redirect,url_for,flash
 from edit import add_new,edit_entry,delete_entry,session
-from random import randint,sample
-from database import YTLink1
-
+from database import Base,articlecontent,articletag,recent,tag,unmissable,trending,engine
 
 
 # if len(videos)%6==0:
@@ -20,12 +18,12 @@ app=Flask(__name__)
 @app.route('/home/')
 @app.route('/page/1')
 def homepage():
-    recent=session.query(recent).all()
-    unmissable=session.query(unmissable).all()
-    trending=session.query(trending).all()
-    return render_template('homepagetemp.html',recent=recent,unmissable=unmissable,trending=trending)
+    recentrec=session.query(recent).all()
+    unmissablerec=session.query(unmissable).all()
+    trendingrec=session.query(trending).all()
+    return render_template('homepagetemp.html',recent=recentrec,unmissable=unmissablerec,trending=trendingrec)
 
-    
+'''   
 @app.route('/contact')
 def contactpage():
     videos=session.query(YTLink1).all()
@@ -84,6 +82,7 @@ def formfill():
         return redirect(url_for('formfill'))
     else:
         return render_template('form.html')
+'''
 
 if __name__ == '__main__':
     app.debug=True
